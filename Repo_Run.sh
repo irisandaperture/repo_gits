@@ -13,9 +13,8 @@ while IFS= read -r repo_url; do
     # Move into the repository directory
     cd "$repo_name" || continue
 
-    # Execute additional commands
+    # Execute additional command
     pip install -r requirements.txt
-    git reset --hard && git pull
 
     # Move back to the original directory
     cd ..
