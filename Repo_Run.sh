@@ -13,8 +13,8 @@ while IFS= read -r repo_url; do
     # Move into the repository directory
     cd "$repo_name" || continue
 
-    # Execute additional command
-    pip install -r requirements.txt
+    # Replace this line with the commands you want to execute
+    echo "Post-clone action for $repo_name"
 
     # Move back to the original directory
     cd ..
@@ -22,3 +22,4 @@ while IFS= read -r repo_url; do
     echo "Error: Repository directory '$repo_name' not found."
   fi
 done < git_clones.txt
+
